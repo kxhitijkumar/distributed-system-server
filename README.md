@@ -22,7 +22,7 @@ The system is designed using a **microservice-style distributed architecture**.
 3. **Backend Services (Flask Apps):** Multiple instances of a lightweight Flask server run independently, serving client requests concurrently.  
 4. **Containerization (Docker):** Ensures isolated, reproducible environments for each service.  
 
-### **PlantUML Diagram**
+### **System Architecture Diagram**
 <img width="1149" height="406" alt="image" src="https://github.com/user-attachments/assets/3db2e000-109e-4fa9-8d6e-fa7ca81700cd" />
 
 
