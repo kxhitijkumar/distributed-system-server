@@ -146,5 +146,5 @@ The approach serves as a foundation for extending into **Kubernetes orchestratio
 
 ---
 
-*Author: [Your Name]*  
+*Author: Kshitij Kumar*  
 *Date: October 2025*
