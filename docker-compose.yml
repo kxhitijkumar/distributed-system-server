@@ -1,0 +1,54 @@
+services:
+  app1:
+    build:
+      context: ./app
+    container_name: app1
+    environment:
+      - INSTANCE_ID=app1
+    networks:
+      - demo-net
+
+  app2:
+    build:
+      context: ./app
+    container_name: app2
+    environment:
+      - INSTANCE_ID=app2
+    networks:
+      - demo-net
+
+  app3:
+    build:
+      context: ./app
+    container_name: app3
+    environment:
+      - INSTANCE_ID=app3
+    networks:
+      - demo-net
+  
+  app4:
+    build:
+      context: ./app
+    container_name: app4
+    environment:
+      - INSTANCE_ID=app4
+    networks:
+      - demo-net
+
+  nginx:
+    image: nginx:stable
+    container_name: nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "8080:80"    # host port 8080 -> nginx 80
+    depends_on:
+      - app1
+      - app2
+      - app3
+    networks:
+      - demo-net
+
+networks:
+  demo-net:
+    driver: bridge
