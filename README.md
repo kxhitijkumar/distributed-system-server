@@ -23,28 +23,8 @@ The system is designed using a **microservice-style distributed architecture**.
 4. **Containerization (Docker):** Ensures isolated, reproducible environments for each service.  
 
 ### **PlantUML Diagram**
-```plantuml
-@startuml
-title Distributed System Server Architecture
+<img width="1149" height="406" alt="image" src="https://github.com/user-attachments/assets/3db2e000-109e-4fa9-8d6e-fa7ca81700cd" />
 
-actor Client
-rectangle "Distributed Server Setup" {
-  node "Nginx Load Balancer" as LB
-  node "Application Instance 1 (Flask)" as A1
-  node "Application Instance 2 (Flask)" as A2
-  node "Application Instance 3 (Flask)" as A3
-}
-
-Client --> LB : Sends Request
-LB --> A1 : Forwarded Request (Round Robin)
-LB --> A2 : Forwarded Request (Round Robin)
-LB --> A3 : Forwarded Request (Round Robin)
-A1 --> LB : Response
-A2 --> LB : Response
-A3 --> LB : Response
-LB --> Client : Returns Consolidated Response
-@enduml
-```
 
 ---
 
